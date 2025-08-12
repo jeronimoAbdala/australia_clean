@@ -17,7 +17,8 @@ import CardContent from '@mui/material/CardContent';
 import Snackbar from '@mui/material/Snackbar';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import Hero from './presentation/components/hero';
+import Hero from './presentation/components/main/Hero.jsx'
+import NavBar from './presentation/components/header/NavBar.jsx';
 
 
 
@@ -33,18 +34,7 @@ function App() {
 
   return (
     <>
-      {/* AppBar con menú y título */}
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Material-UI Demo
-          </Typography>
-          <Button color="inherit" onClick={() => setModalOpen(true)}>Open Modal</Button>
-        </Toolbar>
-      </AppBar>
+     <NavBar></NavBar>
 
         <Hero></Hero>
       <main style={{ padding: 16, maxWidth: 600, margin: 'auto' }}>
